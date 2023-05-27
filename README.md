@@ -1,7 +1,24 @@
 sentiment_classification
 ==============================
 
-I built a sentiment classifier to classify restaurant reviews
+The objective of this project is to build a sentiment classifier to classify restaurant reviews.
+
+I will be using the file reviews_res.csv that contains close to 2000 reviews. Values in reviews.csv are tab separated instead
+of comma. 
+
+Task
+The main task is to do sentiment analysis of the reviews. I will do this by training and testing a BoW text classifier on the review
+texts using RatingValue as labels. The ratings are binned into negative (ratings 1 & 2 ), neutral (rating 3 ) and positive
+(ratings 4 & 5 ) sentiment. The binned ratings are coded with negative as 0 , neutral as 1 and positive as 2 . This new
+column is called Sentiment.
+
+However, the ratings are very unbalanced, there are many more positive ( 2 ) ratings than negative ( 0 ) ratings. By dropping
+the positive ratings we can balance the data so that we have approximately equal numbers of negative, neutral and positive
+ratings.
+
+Once this is done, the data is split into training and validation sets and saved as train.csv and valid.csv (saved in data/interim folder). The
+validation data should be used for model selection and evaluation.
+
 
 Project Organization
 ------------
